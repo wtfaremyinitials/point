@@ -1,5 +1,10 @@
 {
-    "name": "point",
-    "version": "0.0.0",
-    "private": true
+  "name": "point",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "babelify": "^6.0.2",
+    "browserify": "^9.0.8",
+    "gulp": "^3.8.11"
+  }
 }
