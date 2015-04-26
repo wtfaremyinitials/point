@@ -3,9 +3,9 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var babelify   = require('babelify');
 
-gulp.task('etc', function() {
+gulp.task('www', function() {
     gulp
-      .src('etc/**')
+      .src('www/**')
       .pipe(gulp.dest('./dist/'));
 });
 
@@ -18,9 +18,9 @@ gulp.task('scripts', function() {
         .pipe(require('fs').createWriteStream('./dist/app.js'));
 });
 
-gulp.task('default', ['scripts', 'etc']);
+gulp.task('default', ['scripts', 'www']);
 
 gulp.task('watch', function() {
     gulp.watch('src/', ['scripts']);
-    gulp.watch('etc/', ['etc']);
+    gulp.watch('www/', ['www']);
 });
